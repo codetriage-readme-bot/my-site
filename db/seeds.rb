@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Post.create(title: 'Blog App', body: 'Application with using SQLite, AngularJS & Bootstrap')
+Post.create(title: 'Rails or PHP', body: 'What would you choose - Rails 4.2 or PHP 5.4 ?')
+Post.create(title: 'Full Stack Dev', body: 'How quickly you can become developers over all web-stack?')

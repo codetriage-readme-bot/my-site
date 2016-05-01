@@ -4,11 +4,13 @@
     <h1> Hello, people! </h1>
     <p>It is now <%= @time %></p>
 
-    <%= link_to "Posts", posts_path %>
+    <%= link_to "Posts", posts_path, class: "btn btn-primary btn-lg" %>
 
+    <p/>
+    <p>Projects files are:</p>
     <ul>
       <% for file in @files %>
-        <li>file name is <%= file %></li>
+        <li><%= file %></li>
       <% end %>
     </ul>
 
