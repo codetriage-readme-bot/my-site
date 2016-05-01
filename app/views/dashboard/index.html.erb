@@ -1,5 +1,14 @@
 <html>
   <body>
-    "Hello, people!"
+    <h1> Hello, people! </h1>
+    <p>It is now <%= @time %></p>
+    <%=
+      #link_to "Posts", posts_path, method: :get
+    %>
+    <ul>
+      <% for file in @files %>
+        <li>file name is <%= file %></li>
+      <% end %>
+    </ul>
   </body>
 </html>
