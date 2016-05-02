@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+<p class="blog-header">
+  <h1 class="blog-title"><%= @post.title %></h1>
 </p>
 
-<p>
-  <strong>Body:</strong>
+<p class="blog-main">
   <%= @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<ul class="pager">
+  <li><%= link_to 'Edit', edit_post_path(@post) %></li>
+  <li><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <li><%= link_to 'Back', posts_path %></li>
+</ul>
