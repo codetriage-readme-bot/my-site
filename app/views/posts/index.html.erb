@@ -1,20 +1,33 @@
 <h1>Listing Posts</h1>
 
-<table>
-  <tbody>
-    <% @posts.each do |post| %>
-    <div class="col-md-4">
-      <h2><%= post.title %></h2>
-      <p><%= post.body %></p>
-      <%= link_to 'Read', post, class: "btn btn-default" %>
-    </div>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <table>
+    <tbody>
+      <!-- TODO solve problem with col-md-3 and float -->
+      <!-- TODO clearfix doesn't work ? -->
+      <% @posts.each do |post| %>
+        <div class="col-md-4 col-sm-6">
+          <div class="uno-post">
+            <h2><%= post.title %></h2>
+            <p><%= truncate(post.body, length: 200) %></p>
+            <!-- was implemented read_more feature by using truncate() -->
+            <%= link_to 'Read', post, class: "btn btn-default" %>
+          </div>
+        </div>
+      <% end %>
+      <div class="col-md-4 col-sm-6" align="center">
+        <div class="new_post">
+          <h2><p></h2>
+          <%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
+        </div>
+      </div>
+    </tbody>
+  </table>
+</div>
 
-<br>
+<!-- <br> -->
 
-<div class="col-md-4">
+<!-- <div class="col-md-4">
   <h2><p></h2>
   <%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
-</div>
+</div> -->

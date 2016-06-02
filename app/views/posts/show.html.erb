@@ -2,8 +2,9 @@
   <h1 class="blog-title"><%= @post.title %></h1>
 </p>
 
+<!-- TODO fix formatting of the posts by using markdown, for example -->
 <p class="blog-main">
-  <%= @post.body %>
+  <%= simple_format(@post.body) %>
 </p>
 
 <ul class="pager">
