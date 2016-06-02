@@ -20,6 +20,11 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit "Create/Update Post", class: "btn btn-default" %>
+    <span class="nav navbar-nav navbar-left">
+      <%= f.submit 'Create/Update Post', class: "btn btn-default" %>
+    </span>
+    <span class="nav navbar-nav navbar-right">
+      <%= link_to 'Cancel', posts_path, class: "btn btn-default" %>
+    </span>
   </div>
 <% end %>
