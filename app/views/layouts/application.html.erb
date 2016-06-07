@@ -4,6 +4,7 @@
   <title>BlogSqliteAngularjsBootstrap</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
@@ -33,16 +34,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><%= link_to "Home", posts_path %></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="https://github.com/romasks">Portfolio</a></li>
+            <li><%= link_to "Blog", posts_path %></li>
             <li><a href="contact">Contact</a></li>
             <li><a href="about">About</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><%= link_to image_tag("facebook.png"), url_for("https://www.facebook.com/romasks") %></a></li>
-            <li><a href="#"><%= image_tag("twitter.png") %></a></li>
-            <li><a href="#"><%= image_tag("google_plus.png") %></a></li>
-            <li><a href="#"><%= image_tag("rss.png") %></a></li>
+          <ul class="nav navbar-nav navbar-right social">
+            <!-- <li><%= link_to image_tag("facebook_2.png", size: "30x30"), url_for("https://www.facebook.com/romasks") %></li>
+            <li><%= link_to image_tag("twitter_2.png", size: "30x30"), url_for("https://twitter.com/romasks") %></li>
+            <li><a href="#"><%= image_tag("google_plus_2.png", size: "30x30") %></a></li>
+            <li><a href="#"><%= image_tag("rss_2.png", size: "30x30") %></a></li> -->
+            <li><a href="https://www.facebook.com/romasks"><i class="fa fa-lg fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/romasks"><i class="fa fa-lg fa-twitter"></i></a></li>
+            <li><a href="https://plus.google.com/114725290751512617896"><i class="fa fa-lg fa-google-plus"></i></a></li>
+            <li><a href="https://github.com/romasks"><i class="fa fa-lg fa-github"></i></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
