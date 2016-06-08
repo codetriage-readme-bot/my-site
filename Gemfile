@@ -33,3 +33,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Due to develop:
 gem 'bower-rails'
 # gem 'devise'  # For remember to install
+gem 'bootstrap-sass', '~> 3.3.6'

@@ -2,8 +2,9 @@
   <h1 class="blog-title"><%= @post.title %></h1>
 </p>
 
+<!-- TODO fix formatting of the posts by using markdown, for example -->
 <p class="blog-main">
-  <%= @post.body %>
+  <%= simple_format(@post.body) %>
 </p>
 
 <ul class="pager">
@@ -11,3 +12,27 @@
   <li><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   <li><%= link_to 'Back', posts_path %></li>
 </ul>
+
+<p>/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\</p>
+
+<p>
+  <h3>Comments</h3>
+</p>
+
+<% @post.comments.reverse.each do |comment| %>
+  <p>
+    <strong>Posted <%= time_ago_in_words(comment.created_at) %> ago </strong><br />
+    <table>
+      <tr>
+        <td><%= comment.body %></td>
+        <td width="10%">
+          <%= link_to 'Edit', edit_post_comment_path(@post, comment) %>
+          <%= link_to 'Delete', [@post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    </table>
+  </p>
+  <p>___________________________________________________________________________</p>
+<% end %>
+
+<%= link_to 'Add Comment', new_post_comment_path(@post), class: "btn btn-default" %>
