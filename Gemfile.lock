@@ -82,6 +82,7 @@ GEM
     nokogiri (1.6.8-x64-mingw32)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    pg (0.18.4-x64-mingw32)
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -136,7 +137,7 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.4)
+    tzinfo-data (1.2016.5)
       tzinfo (>= 1.0.0)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
@@ -156,6 +157,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
