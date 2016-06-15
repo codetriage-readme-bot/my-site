@@ -17,7 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc  # bundle exec rake doc:rails generates the 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
+  gem 'pg'
 end
 
 group :development do
