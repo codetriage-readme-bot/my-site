@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
 
 gem 'rails', '4.2.5'
 gem 'sass-rails', '~> 5.0'
@@ -14,18 +15,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc  # bundle exec rake doc:rails generates the 
 # gem 'unicorn'                 # Use Unicorn as the app server
 # gem 'capistrano-rails', group: :development     # Use Capistrano for deployment
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+group :test do
+  gem 'byebug'                      # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pg'
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.0'       # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'byebug'
+  gem 'pg'
 end
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
