@@ -84,6 +84,7 @@ GEM
       pkg-config (~> 1.1.7)
     pg (0.18.4-x64-mingw32)
     pkg-config (1.1.7)
+    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -131,7 +132,7 @@ GEM
       rdoc (~> 4.0)
     seed_dumper (0.1.3)
       rails
-    sprockets (3.6.0)
+    sprockets (3.6.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.0.4)
@@ -164,6 +165,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  puma
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
