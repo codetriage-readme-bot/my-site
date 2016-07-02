@@ -179,9 +179,6 @@ header {
 .pasek > li > a {
   padding: 25px 15px;
 }
-.social > li > a {
-  padding: 15px 15px;
-}
 // .navbar-nav > li.active-link > a {
 //   border-bottom: 1px solid #d42819;
 // }
@@ -195,5 +192,12 @@ header {
   // float: right !important;
   // margin-right: -15px;
   position: relative;
+}
+// END
+
+// FOOTER
+.social > a {
+  background-color: white;
+  padding: 15px;
 }
 // END
