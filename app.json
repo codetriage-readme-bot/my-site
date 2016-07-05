@@ -12,18 +12,6 @@
     },
     "HEROKU_PARENT_APP_NAME": {
       "required": true
-    },
-    "INHERIT_THIS_CONFIG_VAR": {
-      "required": true
-    },
-    "DONT_INHERIT_THIS_CONFIG_VAR": "production",
-    "SECRET_TOKEN": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
-    },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
     }
   },
   "addons": [
