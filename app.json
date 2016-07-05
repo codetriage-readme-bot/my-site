@@ -1,0 +1,37 @@
+{
+  "name": "My website",
+  "description": "My first full project on Ruby and Rails.",
+  "repository": "https://github.com/romasks/blog-sab",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  },
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required": true
+    },
+    "INHERIT_THIS_CONFIG_VAR": {
+      "required": true
+    },
+    "DONT_INHERIT_THIS_CONFIG_VAR": "production",
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ]
+}
