@@ -251,7 +251,8 @@ header {
   max-width: 100%;
   min-width: 380px;
   // width: 300px;
-  padding: 60px 40px 40px 40px;background: #fefefe;
+  padding: 60px 40px 40px 40px;
+  background: #fefefe;
   border: 0;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, .19);
@@ -263,4 +264,21 @@ header {
 }
 #margin20 {
   margin: 0 0 20px 0;
+}
+
+
+
+
+.post-content {
+  position: relative;
+  padding: 18px;
+  max-width: 750px;
+}
+.post-content p {
+  color: #333;
+  line-height: 27px;
+  font-size: 18px;
+}
+.post-content a {
+  color: #0076df;
 }

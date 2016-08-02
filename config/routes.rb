@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   get 'about' => 'dashboard#about'
+  get 'projects' => 'dashboard#projects'
   get 'contact' => 'dashboard#contact'
   get 'home' => 'posts#index'
 
