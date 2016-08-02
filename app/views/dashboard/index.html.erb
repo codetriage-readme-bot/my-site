@@ -1,18 +1,29 @@
-<html>
-  <body>
-
-    <h1> Hello, people! </h1>
-    <p>It is now <%= @time %></p>
-
-    <%= link_to "Posts", posts_path, class: "btn btn-primary btn-lg" %>
-
-    <p/>
-    <p>Projects files are:</p>
-    <ul>
-      <% for file in @files %>
-        <li><%= file %></li>
-      <% end %>
-    </ul>
-
-  </body>
-</html>
+<div id="wrapper">
+  <div class="card">
+    <div id="margin20">
+      <%= image_tag("its_me.jpg", height: 100, width: 100) %></a>
+    </div>
+    <h3 id="margin20">RAMAN SKASKEVICH</h3>
+    <p>SOFTWARE DEVELOPER & TESTER</p>
+    <p id="margin20">RUBY AMATEUR</p>
+    <!-- <ul id="margin20">
+        <li><a href="about">ABOUT</a></li>
+        <li><a href="projects">PROJECTS</a></li>
+        <li><%= link_to "BLOG", posts_path %></li>
+    </ul> -->
+    <div id="margin20">
+      <%= link_to "ABOUT", about_path %>
+      <span style="margin-left: 10px;"></span>
+      <%= link_to "PROJECTS", projects_path %>
+      <span style="margin-left: 10px;"></span>
+      <%= link_to "BLOG", posts_path %>
+    </div>
+    <div class="social" id="margin20">
+      <a href="https://www.facebook.com/romasks"><i class="fa fa-lg fa-facebook"></i></a>
+      <a href="https://twitter.com/romasks"><i class="fa fa-lg fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/raman-skaskevich-919b92bb"><i class="fa fa-lg fa-linkedin"></i></a>
+      <a href="https://github.com/romasks"><i class="fa fa-lg fa-github"></i></a>
+    </div>
+  <a id="margin20" href="mailto:lusersks@gmail.com" class="email">lusersks@gmail.com</a>
+  </div>
+</div>
