@@ -21,6 +21,13 @@ group :test, :development do
 end
 
 group :development do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'webrat'
+end
+
+group :development do
   gem 'web-console', '~> 2.0'   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'seed_dumper'
 end
