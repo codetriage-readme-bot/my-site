@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - 2.2.3
 before_install:
-  - gem uninstall -i /home/travis/.rvm/gems/ruby-2.2.3@global bundler --version 1.12.5
+  - gem uninstall -i /home/travis/.rvm/gems/ruby-2.2.3@global bundler
   - gem install bundler -v 1.10.6
   - bundle install
