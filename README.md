@@ -1,9 +1,6 @@
 # Own web site
+[see it!](https://romasks.herokuapp.com/)
 
-### TODO:
+## Code Status
 
-- [ ] Add RSpec tests
-- [ ] Read list of projects from GitHub
-- [ ] Read posts from my social networks
-- [ ] In "About" add my CV
-- [ ] Real Time actualize content
+[![Build Status](https://travis-ci.org/romasks/romasks.svg?branch=master)](https://travis-ci.org/romasks/romasks)
