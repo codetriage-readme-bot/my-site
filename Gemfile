@@ -20,10 +20,10 @@ group :test, :development do
   gem 'byebug'                  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 end
 
-group :development do
+group :development, :test do
   gem 'rspec'
-  gem 'capybara'
   gem 'rspec-rails'
+  gem 'capybara'
   gem 'webrat'
 end
 
