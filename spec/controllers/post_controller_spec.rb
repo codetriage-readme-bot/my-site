@@ -15,7 +15,7 @@ describe PostsController, type: :controller do
       post = mock_model(Post)
       Post.stub(:new).and_return(post)
       post.should_receive(:save)
-      post :create
+      post.create
     end
 
     it "redirect to the Posts index" do

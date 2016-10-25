@@ -3,28 +3,32 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'rails', '4.2.5'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 # gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc  # bundle exec rake doc:rails generates the API under doc/api.
+gem 'jbuilder'
+gem 'sdoc', group: :doc  # bundle exec rake doc:rails generates the API under doc/api.
 
 # gem 'bcrypt', '~> 3.1.7'      # Use ActiveModel has_secure_password
 # gem 'unicorn'                 # Use Unicorn as the app server
 # gem 'capistrano-rails', group: :development     # Use Capistrano for deployment
 
-
-group :test, :development do
-  gem 'byebug'                  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-end
+gem 'nokogiri'
 
 group :development, :test do
+  gem 'byebug'                  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'capybara'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'webrat'
+end
+
+group :test do
+  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem 'zeus'
 end
 
 group :development do
@@ -36,6 +40,7 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
+
 gem 'pg'
 
 
