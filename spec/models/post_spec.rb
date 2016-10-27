@@ -7,26 +7,26 @@ describe Post do
 
   it "should be true" do
     # expect(true).to eq true
-    true.should be true
+    expect(true).to be true
   end
 
   it "is valid with valid attributes" do
-    @post.should be_valid
+    expect(@post).to be_valid
   end
 
   it "is not valid without a title" do
     @post.title = nil
-    @post.should_not be_valid
+    expect(@post).not_to be_valid
   end
 
   it "is not valid when the title has less then 10 characters" do
     @post.title = "Post"
-    @post.should_not be_valid
+    expect(@post).not_to be_valid
   end
 
   it "is not valid without a body" do
     @post.body = nil
-    @post.should_not be_valid
+    expect(@post).not_to be_valid
   end
 
 end

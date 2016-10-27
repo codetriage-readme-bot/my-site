@@ -11,7 +11,7 @@ describe "posts/show.html.erb", type: :view do
 
   it "displays the post with its body" do
     render
-    rendered.should match(/The most important title/)
-    rendered.should match(/The body!/)
+    expect(rendered).to match(/The most important title/)
+    expect(rendered).to match(/The body!/)
   end
 end
