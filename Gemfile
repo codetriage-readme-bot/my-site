@@ -28,6 +28,7 @@ end
 group :test do
   gem 'shoulda'
   gem 'shoulda-matchers'
+  gem 'simplecov'
   gem 'zeus'
 end
 

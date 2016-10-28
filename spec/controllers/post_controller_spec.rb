@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+#require File.dirname(__FILE__) + '/../spec_helper'
 
 describe PostsController, type: :controller do
   describe "POST create" do

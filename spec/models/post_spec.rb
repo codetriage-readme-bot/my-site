@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+#require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Post do
   before(:each) do
@@ -6,7 +6,6 @@ describe Post do
   end
 
   it "should be true" do
-    # expect(true).to eq true
     expect(true).to be true
   end
 
