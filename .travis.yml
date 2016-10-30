@@ -6,3 +6,6 @@ before_install:
   - gem install bundler -v 1.10.6
   - bundle install
 script: rspec spec
+addons:
+  code_climate:
+    repo_token: c7fc03050a8073a515773721fbb1de32da8ab236a6fb8cc06aea06cdcabd21e7

@@ -26,9 +26,10 @@ group :development, :test do
 end
 
 group :test do
+  gem 'codeclimate-test-reporter', require: nil
   gem 'shoulda'
   gem 'shoulda-matchers'
-  gem 'simplecov'
+  #gem 'simplecov'
   gem 'zeus'
 end
 
