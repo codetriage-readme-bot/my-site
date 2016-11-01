@@ -110,5 +110,16 @@ describe "About Page" do
       
     end
     
+    context "Admin area" do
+      
+      describe "area" do
+        it "present" do
+          expect(page).to have_css('.admin-area')
+        end
+      end
+      
+      # TODO: Check social network, synch (update), Device gem
+    end
+    
   end
 end
