@@ -1,7 +1,7 @@
 RSpec::Matchers.define :have_title do |item|
   match do |page|
-    selector = '.' + item.downcase + ' h3'
-    Capybara.string(page.body).has_selector?(selector, text: item)
+    selector = '.' + item + ' h3'
+    Capybara.string(page.body).has_selector?(selector, text: item.capitalize)
   end
 end
 
@@ -10,7 +10,7 @@ RSpec::Matchers.define :have_list_of_items do |selector, items|
     selector = selector + ' ul li'
     items.map do |item|
       # TODO: divide fail msg for array (items) into fail msg for every item
-      expect(page).to have_selector(selector, text: item), "item #{item}"
+      expect(page).to have_selector(selector, text: item)
     end
   end
 end
@@ -30,49 +30,41 @@ describe "About Page" do
       expect(page).to have_selector 'h2', text: "About Me"
     end
     
-    #describe "musthead" do
-    #  it "has title" do expect(page).to have_selector 'h2', text: "About Me" end
-    #  it "has name" do expect(page).to have_selector 'strong', text: "Raman Skaskevich" end
-    #  it "has link to wiki"
-    #  it "has link to Ericpol page"
-    #  it "has link to projects page"
-    #end
-    
     context "CV parts" do
     
-      describe "summary" do
-        let(:klas) { '.summary' }
-        it "has class summary" do
-          expect(page).to have_css(klas)
+      all_classes = ["summary","skills","experience","education","languages","courses"]
+        
+      describe "classes" do
+        all_classes.map do |klas|
+          it "has class #{klas}" do
+            expect(page).to have_css('.' + klas)
+          end
         end
-        it "has title" do
-          #expect(page).to have_selector '.summary h3', text: 'Summary'
-          expect(page).to have_title 'Summary'
+      end
+
+      describe "title" do
+        all_classes.map do |klas|
+          it "has title #{klas.capitalize}" do
+            expect(page).to have_title(klas)
+          end
+        end
+      end
+
+      describe "summary" do
+        it "has name" do
+          expect(page).to have_selector('strong', text: "Raman Skaskevich")
         end
       end
       
       describe "skills" do
-        let(:klas) { '.skills' }
-        it "has class skills" do
-          expect(page).to have_css(klas)
-        end
-        it "has title" do
-          expect(page).to have_title 'Skills'
-        end
         it "has list of skills" do
           items = ['Ruby','Ruby on Rails','JavaScript','HTML/CSS']
-          expect(page).to have_list_of_items(klas, items)
+          expect(page).to have_list_of_items('.skills', items)
         end
       end
       
       describe "experience" do
         let(:klas) { '.experience' }
-        it "has class experience" do
-          expect(page).to have_css(klas)
-        end
-        it "has title" do
-          expect(page).to have_title 'Experience'
-        end
         describe "list of jobs" do
           it "Ericpol" do
             expect(find(klas)).to have_content('Ericpol')
@@ -89,12 +81,6 @@ describe "About Page" do
       
       describe "education" do
         let(:klas) { '.education' }
-        it "has class education" do
-          expect(page).to have_css(klas)
-        end
-        it "has title" do
-          expect(page).to have_title 'Education'
-        end
         describe "list of schools" do
           it "BrSTU" do
             expect(find(klas)).to have_content('Brest State Technical University')
@@ -105,27 +91,14 @@ describe "About Page" do
       end
       
       describe "languages" do
-        let(:klas) { '.languages' }
-        it "has class languages" do
-          expect(page).to have_css(klas)
-        end
-        it "has title" do
-          expect(page).to have_title 'Languages'
-        end
         it "has list of languages" do
           items = ['English','Polish','Russian','Belarussian']
-          expect(page).to have_list_of_items(klas, items)
+          expect(page).to have_list_of_items('.languages', items)
         end
       end
       
       describe "courses" do
         let(:klas) { '.courses' }
-        it "has class courses" do
-          expect(page).to have_css(klas)
-        end
-        it "has title" do
-          expect(page).to have_title 'Courses'
-        end
         describe "list of courses" do
           it "Coursera" do
             expect(find(klas)).to have_content('Web Application Architectures')
