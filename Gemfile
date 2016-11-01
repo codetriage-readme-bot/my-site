@@ -2,35 +2,44 @@ source 'https://rubygems.org'
 
 ruby '2.2.3'
 
-gem 'rails', '4.2.5'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
-# gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
-gem 'jbuilder'
-gem 'sdoc', group: :doc  # bundle exec rake doc:rails generates the API under doc/api.
+gem 'rails', '4.2.7.1'
 
-# gem 'bcrypt', '~> 3.1.7'      # Use ActiveModel has_secure_password
-# gem 'unicorn'                 # Use Unicorn as the app server
-# gem 'capistrano-rails', group: :development     # Use Capistrano for deployment
+################################ OLD GEMS ############################################
+#gem 'rails', '4.2.5'
+#gem 'sass-rails'
+#gem 'uglifier'
+gem 'coffee-rails'
+## gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails'
+#gem 'jbuilder'
+#gem 'sdoc', group: :doc  # bundle exec rake doc:rails generates the API under doc/api.
+#
+## gem 'bcrypt', '~> 3.1.7'      # Use ActiveModel has_secure_password
+## gem 'unicorn'                 # Use Unicorn as the app server
+## gem 'capistrano-rails', group: :development     # Use Capistrano for deployment
+
+## Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+######################################################################################
 
 gem 'nokogiri'
+gem 'pg'
 
 group :development, :test do
   gem 'byebug'                  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'capybara'
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'webrat'
 end
 
 group :test do
+  gem 'capybara'
   gem 'codeclimate-test-reporter', require: nil
+  gem 'rspec'
+  gem 'rspec-rails'
   gem 'shoulda'
   gem 'shoulda-matchers'
   #gem 'simplecov'
   gem 'zeus'
+  gem 'webrat'
 end
 
 group :development do
@@ -42,12 +51,6 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
 end
-
-gem 'pg'
-
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # Due to develop:
