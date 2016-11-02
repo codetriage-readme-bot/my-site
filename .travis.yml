@@ -10,8 +10,9 @@ before_install:
 
 before_script:
   - cp config/database.travis.yml config/database.yml
-  - psql -c "CREATE USER ramax WITH PASSWORD 'ramax';" -U postgres
-  #- psql -c 'create database db_test_psql;' -U postgres
+  - psql -U postgres -c "CREATE USER ramax WITH CREATEUSER PASSWORD 'ramax';"
+  - psql -U postgres -c "ALTER USER ramax CREATEDB;"
+  - psql -U postgres -c "CREATE DATABASE db_test_psql OWNER ramax;"
   
 script: 
   - RAILS_ENV=test bundle exec rake db:migrate --trace
