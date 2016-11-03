@@ -10,8 +10,20 @@
 
 ### TODO:
 
-- [x] Add RSpec tests
-- [ ] Read list of projects from GitHub
-- [ ] Read posts from my social networks
-- [ ] In "About" add my CV
+RSpec tests:
+- [x] Config RSpec
+- [x] About page
+- [ ] Projects page
+- [ ] Blog page
+
+Content:
+- [x] Add CV to About page
+- [ ] Add list of projects from GitHub
+- [ ] Add posts from my social networks
+- [ ] Add Admin area (Auth. - Device gem)
 - [ ] Real Time actualize content
+
+Style:
+- [ ] About page
+- [ ] Projects page
+- [ ] Blog page
