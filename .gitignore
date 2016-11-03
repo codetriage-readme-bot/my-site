@@ -15,7 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
-".env" 
+".env"
 
 /Gemfile.lock
 /spec/request/about_spec.rb
+/.vagrant
