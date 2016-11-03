@@ -3,7 +3,15 @@
 
 ## Code Status
 
-[![Build Status](https://travis-ci.org/romasks/romasks.svg?branch=rspec)](https://travis-ci.org/romasks/romasks)
+[![Build Status](https://travis-ci.org/romasks/romasks.svg?branch=dev)](https://travis-ci.org/romasks/romasks)
 [![Code Climate](https://codeclimate.com/github/romasks/romasks/badges/gpa.svg)](https://codeclimate.com/github/romasks/romasks)
 [![Test Coverage](https://codeclimate.com/github/romasks/romasks/badges/coverage.svg)](https://codeclimate.com/github/romasks/romasks/coverage)
 [![Issue Count](https://codeclimate.com/github/romasks/romasks/badges/issue_count.svg)](https://codeclimate.com/github/romasks/romasks)
+
+### TODO:
+
+- [x] Add RSpec tests
+- [ ] Read list of projects from GitHub
+- [ ] Read posts from my social networks
+- [ ] In "About" add my CV
+- [ ] Real Time actualize content
