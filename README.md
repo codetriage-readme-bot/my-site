@@ -10,6 +10,8 @@
 
 ### TODO:
 
+- [ ] Vagrant (Ubuntu on Win)
+
 RSpec tests:
 - [x] Config RSpec
 - [x] About page
