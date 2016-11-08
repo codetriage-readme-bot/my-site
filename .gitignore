@@ -22,4 +22,4 @@
 
 # Ignore vagrant machine and all coocbooks
 /.vagrant
-/cookbook
+/cookbooks
