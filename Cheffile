@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 site "https://supermarket.getchef.com/api/v1"
-# site 'http://community.opscode.com/api/v1'
 
 cookbook 'apt'
 cookbook 'git'
@@ -10,10 +9,6 @@ cookbook 'ruby_build'
 cookbook 'nodejs'
 cookbook 'vim'
 
-# cookbook 'rbenv',
-#     git: 'https://github.com/aminin/chef-rbenv'
-cookbook 'rvm', #github: 'fnichol/chef-rvm'
-    git: 'git://github.com/fnichol/chef-rvm.git'
-
-cookbook 'postgresql' #, git: 'https://github.com/hw-cookbooks/postgresql'
-cookbook 'nginx' #, git: 'git://github.com/opscode-cookbooks/nginx.git'
+# cookbook 'rvm', git: 'git://github.com/fnichol/chef-rvm.git'
+cookbook 'postgresql', github: 'phlipper/chef-postgresql', ref: '0.16.1'
+cookbook 'nginx'

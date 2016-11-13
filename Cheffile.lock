@@ -11,7 +11,6 @@ SITE
       compat_resource (>= 12.14)
       mingw (>= 1.1)
       seven_zip (>= 0.0.0)
-    chef_gem (0.1.0)
     compat_resource (12.16.1)
     dmg (3.0.0)
     git (5.0.1)
@@ -37,12 +36,7 @@ SITE
       yum-epel (>= 0.0.0)
     ohai (4.2.2)
       compat_resource (>= 12.14)
-    openssl (6.0.0)
     packagecloud (0.2.5)
-    postgresql (5.0.0)
-      apt (>= 1.9.0)
-      build-essential (>= 2.0.0)
-      openssl (>= 4.0)
     ruby_build (1.0.0)
       yum-epel (>= 0.0.0)
     runit (3.0.0)
@@ -57,12 +51,12 @@ SITE
       yum (>= 3.6)
 
 GIT
-  remote: git://github.com/fnichol/chef-rvm.git
-  ref: master
-  sha: eddd733694a1d3e0872f5692e8dda93aa2752791
+  remote: https://github.com/phlipper/chef-postgresql
+  ref: 0.16.1
+  sha: 13a8c2ff4ec2b778a29ac4891740806807ce6e6f
   specs:
-    rvm (0.10.1)
-      chef_gem (>= 0.0.0)
+    postgresql (0.16.1)
+      apt (>= 1.9.0)
 
 DEPENDENCIES
   apt (>= 0)
@@ -72,6 +66,5 @@ DEPENDENCIES
   nodejs (>= 0)
   postgresql (>= 0)
   ruby_build (>= 0)
-  rvm (>= 0)
   vim (>= 0)
 
