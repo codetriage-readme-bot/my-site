@@ -33,14 +33,15 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'codeclimate-test-reporter', require: nil
   gem 'rspec'
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'shoulda-matchers'
-  #gem 'simplecov'
   gem 'zeus'
   gem 'webrat'
+
+  gem 'simplecov'
+  gem 'codeclimate-test-reporter', "~> 1.0.0"
 end
 
 group :development do

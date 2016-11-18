@@ -42,7 +42,7 @@ describe "About Page" do
         end
       end
 
-      describe "title" do
+      describe "titles" do
         all_classes.map do |klas|
           it "has title #{klas.capitalize}" do
             expect(page).to have_title(klas)
@@ -61,6 +61,8 @@ describe "About Page" do
           items = ['Ruby','Ruby on Rails','JavaScript','HTML/CSS']
           expect(page).to have_list_of_items('.skills', items)
         end
+        
+        it "click _in_ than render skills from linkedin"
       end
       
       describe "experience" do

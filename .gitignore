@@ -19,6 +19,7 @@
 
 /Gemfile.lock
 /spec/request/about_spec.rb
+/coverage
 
 # Ignore vagrant machine and all coocbooks
 /.vagrant
