@@ -24,6 +24,7 @@ gem 'jquery-rails'
 
 ######################################################################################
 
+gem 'bower-rails'               # For install AngularJS and Bootstrap
 gem 'nokogiri'
 gem 'pg'
 
@@ -55,8 +56,8 @@ group :production do
 end
 
 
-# Due to develop:
-gem 'bower-rails'
+
 # gem 'devise'  # For remember to install
 gem 'bootstrap-sass', '~> 3.3.6'
+
 #gem 'bundler', '1.10.6'

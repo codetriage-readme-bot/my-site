@@ -3,4 +3,9 @@ class DashboardController < ApplicationController
     #@time = Time.now
     #@files = Dir.glob('*')
   end
+  
+  def about
+    p @soc_net = params[:soc_net]
+    p @item = params[:item]
+  end
 end
