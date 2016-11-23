@@ -10,5 +10,16 @@ class DashboardController < ApplicationController
     
     #curl -H "Authorization: Bearer <token>" "https://api.linkedin.com/v1/people/~:raman-skaskevich-919b92bb?format=json"
     #https://api.linkedin.com/v1/people-search:(people:(raman-skaskevich-919b92bb))?first-name=parameter&last-name=parameter
+    
+    getListOfItems()
+  end
+  
+  def getListOfItems()
+    # 1 - Determine social network
+    
+    # 2 - Parse corresponding file
+    
+    # 3 - Search needed items
+    
   end
 end
