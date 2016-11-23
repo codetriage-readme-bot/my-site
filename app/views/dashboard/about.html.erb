@@ -17,7 +17,12 @@
         </div>
         
         <div class="skills">
-          <div><h3>Skills</h3><a href="https://www.linkedin.com/in/raman-skaskevich-919b92bb"><i class="fa fa-lg fa-linkedin"></i></a></div>
+          <div>
+            <h3>
+              Skills
+              <a href="https://www.linkedin.com/in/raman-skaskevich-919b92bb"><i class="fa fa-lg fa-linkedin"></i></a>
+            </h3>
+          </div>
           <ul>
             <li>Ruby</li>
             <li>Ruby on Rails</li>
@@ -27,7 +32,12 @@
         </div>
         
         <div class="experience">
-          <h3>Experience</h3>
+          <h3>
+            Experience
+            <%= link_to "in",
+              about_path(soc_net: "LinkedIn", item: "Experience")
+            %>
+          </h3>
           <ul>
             <li>
               <p>Ericpol</p>
@@ -82,6 +92,7 @@
 
       <article class="admin-area">
         <p>ADMIN AREA</p>
+        <%= render :partial => 'admin_area' %>
       </article>
 
     </td>
