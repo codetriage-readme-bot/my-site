@@ -7,5 +7,11 @@
   <%= @item %>
 </h3>
 <p>
-  <!--listOfItems()-->
+  <% if @items != nil %>
+    <ul>
+      <% @items.each do |item| %>
+        <li><h4><%= item %></h4></li>
+      <% end %>
+    </ul>
+  <% end %>
 </p>

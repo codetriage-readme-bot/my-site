@@ -8,7 +8,13 @@
       <article class="view-area">
         
         <div class="summary post-content">
-          <h3>Summary</h3>
+          <h3>
+            Summary
+            <%= link_to "in",
+                about_path(soc_net: "LinkedIn", item: "Summary"),
+                class: "fa fa-lg about-in"
+            %>
+          </h3>
         
           <p><em><strong>I’m Raman Skaskevich.</strong></em> I’m from the <a href="https://en.wikipedia.org/wiki/Brest,_Belarus">Brest, Belarus</a> and I have an interest to all things involving code.</p>
           <p>I graduated from the Brest State Technical University in 2012 and received a BSc in Computing Engeneering. Currently, I’m a software developer and tester at the <a href="http://www.ericpol.com/">Ericsson Ericpol</a>.</p>
@@ -75,7 +81,13 @@
         </div>
         
         <div class="education">
-          <h3>Education</h3>
+          <h3>
+            Education
+            <%= link_to "in",
+                about_path(soc_net: "LinkedIn", item: "Education"),
+                class: "fa fa-lg about-in"
+            %>
+          </h3>
           <ul>
             <li>
               <p>Brest State Technical University</p>
@@ -86,7 +98,13 @@
         </div>
         
         <div class="languages">
-          <h3>Languages</h3>
+          <h3>
+            Languages
+            <%= link_to "in",
+                about_path(soc_net: "LinkedIn", item: "Languages"),
+                class: "fa fa-lg about-in"
+            %>
+          </h3>
           <ul>
             <li>English</li>
             <li>Polish</li>
@@ -96,7 +114,13 @@
         </div>
         
         <div class="courses">
-          <h3>Courses</h3>
+          <h3>
+            Courses
+            <%= link_to "in",
+                about_path(soc_net: "LinkedIn", item: "Courses"),
+                class: "fa fa-lg about-in"
+            %>
+          </h3>
           <ul>
             <li>
               <p>Web Application Architectures</p>
