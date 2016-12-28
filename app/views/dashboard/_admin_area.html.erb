@@ -2,7 +2,7 @@
   <%= @soc_net %>
 </h3>
 <h3>
-  <%= @item.capitalize %>
+  <%= @item.capitalize if @item != nil %>
 </h3>
 <p>
   <% if @items != nil %>

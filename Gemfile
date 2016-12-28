@@ -24,8 +24,11 @@ gem 'jquery-rails'
 
 ######################################################################################
 
+gem 'responders', '~> 2.0'
 gem 'nokogiri'
 gem 'pg'
+gem 'codacy-coverage', require: false
+gem 'vcr', require: false
 
 group :development, :test do
   gem 'byebug'                  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,7 +43,7 @@ group :test do
   gem 'zeus'
   gem 'webrat'
 
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'codeclimate-test-reporter', "~> 1.0.0"
 end
 

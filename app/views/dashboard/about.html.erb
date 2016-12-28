@@ -138,8 +138,9 @@
     <td>
 -->
 <div style="float:left; width:40%; position:fixed; left:60%;">
-      <article class="admin-area">
+      <article class="admin-area" ng-app="romasks" np-controller="MainCtrl">
         <p>ADMIN AREA</p>
+        {{ hello }}
         <%= render partial: 'admin_area' %>
       </article>
 </div>

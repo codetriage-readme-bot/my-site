@@ -1,7 +1,11 @@
 class DashboardController < ApplicationController
+  respond_to :html, :js
+  
   def index
-    #@time = Time.now
-    #@files = Dir.glob('*')
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
   
   def about
