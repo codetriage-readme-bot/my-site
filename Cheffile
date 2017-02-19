@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+site "https://supermarket.getchef.com/api/v1"
+
+cookbook 'apt'
+cookbook 'git'
+cookbook 'build-essential'
+cookbook 'ruby_build'
+cookbook 'nodejs'
+cookbook 'vim'
+
+# cookbook 'rvm', git: 'git://github.com/fnichol/chef-rvm.git'
+cookbook 'postgresql', github: 'phlipper/chef-postgresql', ref: '0.16.1'
+cookbook 'nginx'

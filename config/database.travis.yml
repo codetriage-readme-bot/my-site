@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  username: ramax
+  password: ramax
+  pool: 5
+  timeout: 5000
+
+
+development:
+  <<: *default
+  database: db_development_psql
+
+test:
+  <<: *default
+  database: db_test_psql
+
+production:
+  <<: *default
+  database: db_production_psql

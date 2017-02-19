@@ -1,0 +1,140 @@
+{
+  "basics": {
+    "name": "Raman Skaskevich",
+    "label": "Software Developer, Ericsson Ericpol",
+    "phone": "",
+    "website": "",
+    "summary": "I work as a Software Developer and Tester in Ericsson Ericpol more than 4 years. I work in a team on project with different complexity. I am a ruby amateur and I am interested in the all frameworks that work with it. I am looking for career opportunities.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "",
+      "region": ""
+    },
+    "profiles": []
+  },
+  "work": [
+    {
+      "company": "Ericsson Ericpol",
+      "position": "Software Developer",
+      "website": "",
+      "startDate": "2015-01-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "Ericpol",
+      "position": "Junior Software Developer",
+      "website": "",
+      "startDate": "2012-08-01",
+      "summary": "",
+      "highlights": [],
+      "endDate": "2014-12-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Coursera",
+      "area": "",
+      "studyType": "",
+      "startDate": "2015-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2015-01-01"
+    },
+    {
+      "institution": "Brest State Technical University",
+      "area": "",
+      "studyType": "Bachelor's degree",
+      "startDate": "2007-01-01",
+      "gpa": "",
+      "courses": [],
+      "endDate": "2012-01-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Ruby",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Ruby on Rails",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TTCN",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "GSM",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "HTML",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ASN.1",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "CSS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "SQL",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "Белорусский",
+      "fluency": "Native or bilingual"
+    },
+    {
+      "language": "Русский",
+      "fluency": "Native or bilingual"
+    },
+    {
+      "language": "Английский",
+      "fluency": "Limited working"
+    },
+    {
+      "language": "Польский",
+      "fluency": "Professional working"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Programming. New Technologies. Football. Science.",
+      "keywords": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "My website",
+      "startDate": "2016-05-01",
+      "summary": "My own website. In stage of development and improvement.\nhttps://github.com/romasks/romasks",
+      "url": "https://romasks.herokuapp.com/"
+    }
+  ]
+}

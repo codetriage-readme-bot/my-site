@@ -1,0 +1,15 @@
+<h3>
+  <%= @soc_net %>
+</h3>
+<h3>
+  <%= @item.capitalize if @item != nil %>
+</h3>
+<p>
+  <% if @items != nil %>
+    <ul>
+      <% @items.each do |item| %>
+        <li><h4><%= item %></h4></li>
+      <% end %>
+    </ul>
+  <% end %>
+</p>
