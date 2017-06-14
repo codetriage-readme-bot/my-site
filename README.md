@@ -1,24 +1,24 @@
-# README
+# [Link to app](https://romasks.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Code Status
 
-Things you may want to cover:
+[![Codeship Status](https://app.codeship.com/projects/2110c620-356a-0134-e2bd-0eb0c8e6c9c0/status?branch=master)](https://app.codeship.com/projects/165250)
+[![Travis CI Status](https://travis-ci.org/romasks/romasks.svg?branch=master)](https://travis-ci.org/romasks/romasks)
+[![Code Climate](https://codeclimate.com/github/romasks/romasks/badges/gpa.svg)](https://codeclimate.com/github/romasks/romasks)
+[![Test Coverage](https://codeclimate.com/github/romasks/romasks/badges/coverage.svg)](https://codeclimate.com/github/romasks/romasks/coverage)
+[![Issue Count](https://codeclimate.com/github/romasks/romasks/badges/issue_count.svg)](https://codeclimate.com/github/romasks/romasks)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/lusersks/romasks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romasks/romasks&amp;utm_campaign=Badge_Grade)
 
-* Ruby version
+### TODO:
 
-* System dependencies
+- [ ] Welcome page (about me)
+- [ ] Create Posts
+- [ ] Add devise
+- [ ] Create Photos
+- [ ] Config RSpec
 
-* Configuration
 
-* Database creation
+### Component version:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby 2.4.0
+* Rails 5.0.3
