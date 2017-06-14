@@ -1,0 +1,17 @@
+language: ruby
+
+rvm:
+  - 2.4.0
+
+before_install:
+  - gem uninstall -i /home/travis/.rvm/gems/ruby-2.4.0@global bundler
+  - gem install bundler -v 1.15.1
+  - bundle install
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+
+addons:
+  code_climate:
+    repo_token: c7fc03050a8073a515773721fbb1de32da8ab236a6fb8cc06aea06cdcabd21e7
