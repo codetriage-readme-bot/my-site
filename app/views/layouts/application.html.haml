@@ -1,0 +1,20 @@
+!!! 5
+%html
+%head
+	%title My Site
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+	= csrf_meta_tags
+
+%body
+	%nav.navbar.navbar-inverse
+		.container
+			.navbar-brand= link_to "My Site", root_path
+			%ul.nav.navbar-nav.navbar-left
+				%li= link_to "Posts", root_path
+				%li= link_to "Photos", root_path
+
+	.container
+		-flash.each do |name, msg|
+			=content_tag :div, msg, class: "alert alert-info"
+		= yield
