@@ -1,0 +1,8 @@
+- @posts.each do |post|
+  .col-md-4
+    .box.panel.panel-default
+      .panel-body
+        %h2= link_to post.title, post
+        %p= truncate(post.body, length:200)
+
+= link_to 'Create New One', new_post_path, class: "btn btn-default"

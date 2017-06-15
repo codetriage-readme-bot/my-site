@@ -11,8 +11,8 @@
 
 ### TODO:
 
-- [ ] Welcome page (about me)
-- [ ] Create Posts
+- [X] Welcome page (about me)
+- [x] Create Posts
 - [ ] Add devise
 - [ ] Create Pics
 - [ ] Config RSpec

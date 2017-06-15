@@ -1,0 +1,12 @@
+.col-md-8.col-md-offset-2
+	.row
+		.panel.panel-default
+			.panel-body
+				%h1= @post.title
+				%p= @post.body
+			.panel-footer
+				.row
+					.col-md-12
+						.btn-group.pull-right
+							= link_to 'Fix It', edit_post_path(@post), class: "btn btn-info"
+							= link_to 'Delete', posts_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
