@@ -13,9 +13,9 @@
 
 - [X] Welcome page (about me)
 - [x] Create Posts
+- [ ] Config RSpec
 - [ ] Add devise
 - [ ] Create Pics
-- [ ] Config RSpec
 
 
 ### Component version:
