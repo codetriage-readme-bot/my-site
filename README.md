@@ -14,7 +14,7 @@
 - [ ] Welcome page (about me)
 - [ ] Create Posts
 - [ ] Add devise
-- [ ] Create Photos
+- [ ] Create Pics
 - [ ] Config RSpec
 
 
