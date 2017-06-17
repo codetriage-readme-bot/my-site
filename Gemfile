@@ -20,20 +20,22 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'simple_form', '~> 3.5'
 
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
 
+  gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'rspec-rails'
 end
+
+gem 'web-console', group: :development
 
 group :test do
   gem 'capybara'
 end
 
-group :development do
-  gem 'web-console'
-end
 
 group :production do
   gem 'pg'
