@@ -1,30 +1,22 @@
 require 'rails_helper'
+require_relative '../support/new_post_form.rb'
 
 feature 'create_new_post' do
+	let(:new_post_form) { NewPostForm.new }
+
 	scenario 'create new post with valid data' do
-		visit '/posts'
-		click_on('Create New One')
+		new_post_form.visit_page.fill_in_with(
+			title: 'The Post'
+		).submit
 
-		fill_in('Title', with: 'Make a Post')
-		fill_in('Body', with: 'Post content')
-		click_on('Create Post')
-
-		within(".flash-container") do
-			expect(page).to have_content 'Post was successfully created.'
-		end
-		expect(Post.last.title).to eq('Make a Post')
+		expect(page).to have_css('.alert', text: 'Post was successfully created.')
+		expect(Post.last.title).to eq('The Post')
 	end
 
 	scenario 'create new post with invalid data' do
-		visit '/posts'
-		click_on('Create New One')
+		new_post_form.visit_page.submit
 
-		click_on('Create Post')
-
-		within(".errors-container") do
-			msg_expect = "2 errors prevented this Post from saving"
-			expect(page).to have_content(msg_expect)
-			expect(page).to have_content('can\'t be blank')
-		end
+		expect(page).to have_css('errors', text: '2 errors prevented this Post from saving')
+		expect(page).to have_css('errors', text: 'can\'t be blank')
 	end
 end

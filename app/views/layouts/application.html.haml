@@ -15,7 +15,6 @@
 				%li= link_to "Pics", root_path
 
 	.container
-		.flash-container
-			-flash.each do |name, msg|
-				=content_tag :div, msg, class: "alert alert-info"
+		-flash.each do |name, msg|
+			=content_tag :div, msg, class: "alert alert-info"
 		= yield

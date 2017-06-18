@@ -1,6 +1,6 @@
 = simple_form_for @post, html: { multipart: true } do |f|
 	- if @post.errors.any?
-		%errors.errors-container
+		%errors
 			%h2
 			= pluralize(@post.errors.count, "error")
 			prevented this Post from saving

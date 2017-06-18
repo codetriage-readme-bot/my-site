@@ -1,77 +1,59 @@
 require 'rails_helper'
 
 feature 'home page' do
+	
 	context 'within panel-body' do
 		scenario 'welcome message' do
 			visit '/'
-			within(".panel-body") do
-				expect(page).to have_content 'Welcome'
-			end
+			expect(page).to have_css('.panel-body', text: 'Welcome')
 		end
 
 		scenario 'author name' do
 			visit '/'
-			within(".panel-body") do
-				expect(page).to have_content 'Raman Skaskevich'
-			end
+			expect(page).to have_css('.panel-body', text: 'Raman Skaskevich')
 		end
 
 		scenario 'job role' do
 			visit '/'
-			within(".panel-body") do
-				expect(page).to have_content 'Software Developer'
-			end
+			expect(page).to have_css('.panel-body', text: 'Software Developer')
 		end
 
 		scenario 'Rails skill' do
 			visit '/'
-			within(".panel-body") do
-				expect(page).to have_content 'Rails'
-			end
+			expect(page).to have_css('.panel-body', text: 'Rails')
 		end
 
 		scenario 'Android skill' do
 			visit '/'
-			within(".panel-body") do
-				expect(page).to have_content 'Android'
-			end
+			expect(page).to have_css('.panel-body', text: 'Android')
 		end
 	end
 
 	context 'within panel-footer' do
 		scenario 'contact message' do
 			visit '/'
-			within(".panel-footer") do
-				expect(page).to have_content 'Contact to me'
-			end
+			expect(page).to have_css('.panel-footer', text: 'Contact to me')
 		end
 
 		scenario 'mail contact' do
 			visit '/'
-			within(".panel-footer") do
-				expect(page).to have_content 'lusersks@gmail.com'
-			end
+			expect(page).to have_css('.panel-footer', text: 'lusersks@gmail.com')
 		end
 
 		scenario 'twitter contact' do
 			visit '/'
-			within(".panel-footer") do
-				expect(page).to have_content '@romasks'
-			end
+			expect(page).to have_css('.panel-footer', text: '@romasks')
 		end
 
 		scenario 'github contact' do
 			visit '/'
-			within(".panel-footer") do
-				expect(page).to have_content 'GitHub Account'
-			end
+			expect(page).to have_css('.panel-footer', text: 'GitHub Account')
 		end
 
 		scenario 'skype contact' do
 			visit '/'
-			within(".panel-footer") do
-				expect(page).to have_content 'Skype: romasks'
-			end
+			expect(page).to have_css('.panel-footer', text: 'Skype: romasks')
 		end
 	end	
+
 end
