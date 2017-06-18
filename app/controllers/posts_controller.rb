@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @body = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@post.body)
   end
 
   def new
