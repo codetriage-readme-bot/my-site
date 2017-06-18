@@ -28,6 +28,7 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
+  gem 'factory_girl_rspec'
 end
 
 gem 'web-console', group: :development
