@@ -26,10 +26,11 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
 
+  gem 'database_cleaner'
+  gem 'factory_girl_rspec'
+  gem 'rspec-rails'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'rspec-rails'
-  gem 'factory_girl_rspec'
 end
 
 gem 'web-console', group: :development

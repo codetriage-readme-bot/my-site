@@ -14,6 +14,23 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  # Database Cleaner
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+  end
+  # This block must be here, do not combine with the other `before(:each)` block.
+  # This makes it so Capybara can see the database.
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+  # Factory Girl
   config.before(:all) do
     FactoryGirl.reload
   end
