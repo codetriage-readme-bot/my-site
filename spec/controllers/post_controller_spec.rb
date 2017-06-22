@@ -79,4 +79,49 @@ describe PostsController do
 			end
 		end
 	end
+
+	describe "PUT update" do
+		let(:post) { FactoryGirl.create(:simple_post) }
+		
+		context "valid data" do
+			let(:valid_data) { FactoryGirl.attributes_for(:post, title: "New Post") }
+
+			it "redirect to posts#show" do
+				put :update, params: { id: post, post: valid_data }
+				expect(response).to redirect_to(post) 
+			end
+      it "update post in the daatabase" do
+      	put :update, params: { id: post, post: valid_data }
+      	post.reload
+      	expect(post.title).to eq("New Post")
+      end
+		end
+
+		context "invalid data" do
+			let(:invalid_data) { FactoryGirl.attributes_for(:post, title: "", body: "new") }
+
+			it "render :edit template" do
+				put :update, params: { id: post, post: invalid_data }
+				expect(response).to render_template(:edit)
+			end
+			it "doesn't update post in the database" do
+				put :update, params: { id: post, post: invalid_data }
+				post.reload
+      	expect(post.body).not_to eq("New")
+			end
+		end
+	end
+
+	describe "DELETE destroy" do
+		let(:post) { FactoryGirl.create(:simple_post) }
+
+		it "redirect to posts#index" do
+			delete :destroy, params: { id: post }
+			expect(response).to redirect_to(posts_path)
+		end
+		it "delete post from database" do
+			delete :destroy, params: { id: post }
+			expect(Post.exists?(post.id)).to be_falsy
+		end
+	end
 end
