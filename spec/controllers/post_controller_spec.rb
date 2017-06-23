@@ -1,30 +1,74 @@
 require 'rails_helper'
 
 describe PostsController do
-	describe "GET index" do
-		it "render :index template" do 
-			get :index
-			expect(response).to render_template(:index)
-		end
-		it "assign simple post to templste" do
-			simple_post = FactoryGirl.create(:simple_post)
-			get :index
-			expect(assigns(:posts)).to match_array([simple_post])
-		end
-	end
 
-	describe "GET show" do
-		let(:post) { FactoryGirl.create(:simple_post) }
+	describe "guest user" do
+		require 'rails_helper'
 
-		it "render :show template" do
-			get :show, params: { id: post }
-			expect(response).to render_template(:show)
+		describe "GET index" do
+			it "render :index template" do 
+				get :index
+				expect(response).to render_template(:index)
+			end
+			it "assign simple post to templste" do
+				simple_post = FactoryGirl.create(:simple_post)
+				get :index
+				expect(assigns(:posts)).to match_array([simple_post])
+			end
 		end
-		it "assign requested post to @post" do
-			get :show, params: { id: post }
-			expect(assigns(:post)).to eq(post)
+
+		describe "GET show" do
+			let(:post) { FactoryGirl.create(:simple_post) }
+
+			it "render :show template" do
+				get :show, params: { id: post }
+				expect(response).to render_template(:show)
+			end
+			it "assign requested post to @post" do
+				get :show, params: { id: post }
+				expect(assigns(:post)).to eq(post)
+			end
 		end
-	end
+
+		describe "GET new" do
+			it "redirect to login page" do
+				get :new
+				expect(response).to redirect_to(new_user_session_url)
+			end
+		end
+
+		describe "GET edit" do
+			it "redirect to login page" do
+				get :edit, params: { id: FactoryGirl.create(:simple_post) }
+				expect(response).to redirect_to(new_user_session_url)
+			end
+		end
+
+		describe "POST create" do
+			it "redirect to login page" do
+				post :create, params: { post: FactoryGirl.attributes_for(:simple_post) }
+				expect(response).to redirect_to(new_user_session_url)
+			end
+		end
+
+		describe "PUT update" do
+			it "redirect to login page" do
+				post :update, params: { 
+					id: FactoryGirl.create(:simple_post),
+					post: FactoryGirl.attributes_for(:simple_post, title: "New Post") 
+				}
+				expect(response).to redirect_to(new_user_session_url)
+			end
+		end
+
+		describe "DELETE destroy" do
+			it "redirect to login page" do
+				delete :destroy, params: { id: FactoryGirl.create(:simple_post) }
+				expect(response).to redirect_to(new_user_session_url)
+			end
+		end
+
+	end # describe guest user
 
 	describe "GET new" do
 		it "render :new template" do
@@ -45,7 +89,7 @@ describe PostsController do
 			expect(response).to render_template(:edit)
 		end
 		it "assign the requested post to template" do
-			get :show, params: { id: post }
+			get :edit, params: { id: post }
 			expect(assigns(:post)).to eq(post)
 		end
 	end
