@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'devise'
 gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'rails-controller-testing'
 gem 'redcarpet'
@@ -27,7 +28,7 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'database_cleaner'
-  gem 'factory_girl_rspec'
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'spring'
   gem 'spring-commands-rspec'
