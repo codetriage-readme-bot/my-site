@@ -7,7 +7,8 @@
 [![Code Climate](https://codeclimate.com/github/romasks/romasks/badges/gpa.svg)](https://codeclimate.com/github/romasks/romasks)
 [![Test Coverage](https://codeclimate.com/github/romasks/romasks/badges/coverage.svg)](https://codeclimate.com/github/romasks/romasks/coverage)
 [![Issue Count](https://codeclimate.com/github/romasks/romasks/badges/issue_count.svg)](https://codeclimate.com/github/romasks/romasks)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/lusersks/romasks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romasks/romasks&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/romasks/my-site?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romasks/my-site&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/romasks/my-site?utm_source=github.com&utm_medium=referral&utm_content=romasks/my-site&utm_campaign=Badge_Coverage)
 
 ### TODO:
 
