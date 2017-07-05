@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  # before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :owners_only, only: [:edit, :update, :destroy]
+  before_action :admin_only, except: [:index, :show]
 
   def index
     @posts = Post.all
@@ -52,9 +52,8 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :body)
     end
 
-    def owners_only
-      find_post
-      if current_user != @post.user
+    def admin_only
+      if current_user.email != "lusersks@gmail.com"
         redirect_to posts_path
       end
     end
