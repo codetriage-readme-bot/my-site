@@ -13,12 +13,13 @@
 
 - [X] Welcome page (about me)
 - [x] Create Posts
-- [ ] Config RSpec
-- [ ] Add devise
+- [X] Config RSpec
+- [X] Add devise
 - [ ] Create Pics
+- [ ] Create Books
 
 
 ### Component version:
 
-* Ruby 2.4.0
+* Ruby 2.3.4
 * Rails 5.0.3
