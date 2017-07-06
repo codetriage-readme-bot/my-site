@@ -5,4 +5,5 @@
         %h2= link_to post.title, post
         %p= truncate(post.body, length:200)
 
-= link_to 'Create New One', new_post_path, class: "btn btn-default"
+- if current_user.is_admin
+  = link_to 'Create New One', new_post_path, class: "btn btn-default"
