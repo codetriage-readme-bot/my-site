@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pics
   devise_for :users
   resources :posts
   root 'welcome#index'
