@@ -3,7 +3,7 @@
 		.panel.panel-default
 			.panel-body
 				%h1= @post.title
-				%p= @post.body
+				= @post.content_html.html_safe
 			.panel-footer
 				.row
 					.col-md-12

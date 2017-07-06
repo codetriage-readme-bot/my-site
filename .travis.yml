@@ -11,7 +11,8 @@ before_install:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
+  - bundle exec bin/rspec spec/controllers/post_controller_spec.rb
 
 addons:
   code_climate:
-    repo_token: c7fc03050a8073a515773721fbb1de32da8ab236a6fb8cc06aea06cdcabd21e7
+    repo_token: a3a36a1f874b79c215786625b036065b02c2b492d1b6b72a43fb4fe3aa293f83
