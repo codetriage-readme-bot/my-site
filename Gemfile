@@ -22,6 +22,9 @@ gem 'haml', '~> 5.0', '>= 5.0.1'
 gem 'rails-controller-testing'
 gem 'redcarpet'
 gem 'simple_form', '~> 3.5'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri

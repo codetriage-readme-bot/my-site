@@ -8,6 +8,6 @@
         .row
           .col-md-12
             .btn-group.pull-right
-              - if current_user.is_admin
+              - if user_signed_in? and current_user.is_admin
                 = link_to 'Fix It', edit_post_path(@post), class: "btn btn-info"
                 = link_to 'Delete', posts_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
