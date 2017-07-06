@@ -3,6 +3,6 @@ FactoryGirl.define do
     title "Title"
     body "content"
 
-    factory :simple_post
+    factory :admin_post
   end
 end

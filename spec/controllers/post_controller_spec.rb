@@ -10,14 +10,14 @@ describe PostsController do
 				expect(response).to render_template(:index)
 			end
 			it "assign post to templste" do
-				post = FactoryGirl.create(:simple_post)
+				post = FactoryGirl.create(:admin_post)
 				get :index
 				expect(assigns(:posts)).to match_array([post])
 			end
 		end
 
 		describe "GET show" do
-			let(:post) { FactoryGirl.create(:simple_post) }
+			let(:post) { FactoryGirl.create(:admin_post) }
 
 			it "render :show template" do
 				get :show, params: { id: post }
@@ -38,14 +38,14 @@ describe PostsController do
 
 		describe "POST create" do
 			it "redirect to login page" do
-				post :create, params: { post: FactoryGirl.attributes_for(:simple_post) }
+				post :create, params: { post: FactoryGirl.attributes_for(:admin_post) }
 				expect(response).to redirect_to(new_user_session_url)
 			end
 		end
 
 		describe "GET edit" do
 			it "redirect to login page" do
-				get :edit, params: { id: FactoryGirl.create(:simple_post) }
+				get :edit, params: { id: FactoryGirl.create(:admin_post) }
 				expect(response).to redirect_to(new_user_session_url)
 			end
 		end
@@ -53,8 +53,8 @@ describe PostsController do
 		describe "PUT update" do
 			it "redirect to login page" do
 				post :update, params: { 
-					id: FactoryGirl.create(:simple_post),
-					post: FactoryGirl.attributes_for(:simple_post, title: "New Post") 
+					id: FactoryGirl.create(:admin_post),
+					post: FactoryGirl.attributes_for(:admin_post, title: "New Post") 
 				}
 				expect(response).to redirect_to(new_user_session_url)
 			end
@@ -62,7 +62,7 @@ describe PostsController do
 
 		describe "DELETE destroy" do
 			it "redirect to login page" do
-				delete :destroy, params: { id: FactoryGirl.create(:simple_post) }
+				delete :destroy, params: { id: FactoryGirl.create(:admin_post) }
 				expect(response).to redirect_to(new_user_session_url)
 			end
 		end
@@ -79,15 +79,15 @@ describe PostsController do
 				get :index
 				expect(response).to render_template(:index)
 			end
-			it "assign simple post to templste" do
-				simple_post = FactoryGirl.create(:simple_post)
+			it "assign admin post to templste" do
+				admin_post = FactoryGirl.create(:admin_post)
 				get :index
-				expect(assigns(:posts)).to match_array([simple_post])
+				expect(assigns(:posts)).to match_array([admin_post])
 			end
 		end
 
 		describe "GET show" do
-			let(:post) { FactoryGirl.create(:simple_post) }
+			let(:post) { FactoryGirl.create(:admin_post) }
 
 			it "render :show template" do
 				get :show, params: { id: post }
@@ -108,14 +108,14 @@ describe PostsController do
 
 		describe "POST create" do
 			it "redirect to posts page" do
-				post :create, params: { post: FactoryGirl.attributes_for(:simple_post) }
+				post :create, params: { post: FactoryGirl.attributes_for(:admin_post) }
 				expect(response).to redirect_to(posts_path)
 			end
 		end
 
 		describe "GET edit" do
 			it "redirect to posts page" do
-				get :edit, params: { id: FactoryGirl.create(:simple_post) }
+				get :edit, params: { id: FactoryGirl.create(:admin_post) }
 				expect(response).to redirect_to(posts_path)
 			end
 		end
@@ -123,8 +123,8 @@ describe PostsController do
 		describe "PUT update" do
 			it "redirect to posts page" do
 				post :update, params: { 
-					id: FactoryGirl.create(:simple_post),
-					post: FactoryGirl.attributes_for(:simple_post, title: "New Post") 
+					id: FactoryGirl.create(:admin_post),
+					post: FactoryGirl.attributes_for(:admin_post, title: "New Post") 
 				}
 				expect(response).to redirect_to(posts_path)
 			end
@@ -132,7 +132,7 @@ describe PostsController do
 
 		describe "DELETE destroy" do
 			it "redirect to posts page" do
-				delete :destroy, params: { id: FactoryGirl.create(:simple_post) }
+				delete :destroy, params: { id: FactoryGirl.create(:admin_post) }
 				expect(response).to redirect_to(posts_path)
 			end
 		end
@@ -144,21 +144,23 @@ describe PostsController do
 			sign_in(user)
 		end
 
-		let(:post) { FactoryGirl.create(:simple_post) }
-
 		describe "GET index" do
+      let(:post) { FactoryGirl.create(:admin_post) }
+
 			it "render :index template" do 
 				get :index
 				expect(response).to render_template(:index)
 			end
-			it "assign simple post to templste" do
+			it "assign admin post to templste" do
 				get :index
 				expect(assigns(:posts)).to match_array([post])
 			end
 		end
 
 		describe "GET show" do
-			it "render :show template" do
+			let(:post) { FactoryGirl.create(:admin_post) }
+
+      it "render :show template" do
 				get :show, params: { id: post }
 				expect(response).to render_template(:show)
 			end
@@ -169,7 +171,9 @@ describe PostsController do
 		end
 
 		describe "GET new" do
-			it "render :new template" do
+			let(:post) { FactoryGirl.create(:admin_post) }
+
+      it "render :new template" do
 				get :new
 				expect(response).to render_template(:new)
 			end
@@ -181,7 +185,7 @@ describe PostsController do
 
 		describe "POST create" do
 			context "valid data" do
-				let(:valid_data) { FactoryGirl.attributes_for(:simple_post) }
+				let(:valid_data) { FactoryGirl.attributes_for(:admin_post) }
 			
 				it "redirect to post#show" do
 					post :create, params: { post: valid_data }
@@ -195,7 +199,7 @@ describe PostsController do
 			end
 
 			context "invalid data" do
-				let(:invalid_data) { FactoryGirl.attributes_for(:simple_post, title: '') }
+				let(:invalid_data) { FactoryGirl.attributes_for(:admin_post, title: '') }
 			
 				it "render :new template" do
 					post :create, params: { post: invalid_data }
@@ -210,7 +214,9 @@ describe PostsController do
 		end
 
 		describe "GET edit" do
-			it "render :edit template" do
+			let(:post) { FactoryGirl.create(:admin_post) }
+
+      it "render :edit template" do
 				get :edit, params: { id: post }
 				expect(response).to render_template(:edit)
 			end
@@ -221,6 +227,8 @@ describe PostsController do
 		end
 
 		describe "PUT update" do
+      let(:post) { FactoryGirl.create(:admin_post) }
+
 			context "valid data" do
 				let(:valid_data) { FactoryGirl.attributes_for(:post, title: "New Post") }
 
@@ -251,7 +259,9 @@ describe PostsController do
 		end
 
 		describe "DELETE destroy" do
-			it "redirect to posts#index" do
+			let(:post) { FactoryGirl.create(:admin_post) }
+
+      it "redirect to posts#index" do
 				delete :destroy, params: { id: post }
 				expect(response).to redirect_to(posts_path)
 			end
