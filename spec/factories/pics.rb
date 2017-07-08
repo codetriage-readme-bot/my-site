@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :pic do
-    title "MyString"
-    description "MyText"
+    title "Our First Pic"
+    description "Something beautiful"
     user nil
+
+    factory :admin_pic
   end
 end

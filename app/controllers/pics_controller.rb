@@ -1,5 +1,7 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :admin_only, except: [:index, :show]
 
   # GET /pics
   # GET /pics.json
@@ -70,5 +72,11 @@ class PicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pic_params
       params.require(:pic).permit(:title, :description, :user_id)
+    end
+
+    def admin_only
+      if current_user.email != "lusersks@gmail.com"
+        redirect_to pics_url
+      end
     end
 end
