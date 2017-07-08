@@ -1,0 +1,11 @@
+#notice
+  = notice
+
+- @pics.each do |pic|
+  .col-md-12
+    .box.panel.panel-default
+      .panel-body
+        %h2= link_to pic.title, pic
+
+- if user_signed_in? and current_user.is_admin
+  = link_to 'New One', new_pic_path, class: "btn btn-default"
