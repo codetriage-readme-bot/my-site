@@ -1,7 +1,7 @@
 class PicsController < ApplicationController
-  before_action :set_pic, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :admin_only, except: [:index, :show]
+  before_action :set_pic, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :show, :upvote]
+  before_action :admin_only, except: [:index, :show, :upvote]
 
   # GET /pics
   # GET /pics.json
@@ -61,6 +61,11 @@ class PicsController < ApplicationController
       format.html { redirect_to pics_url, notice: 'Pic was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @pic.upvote_by current_user
+    redirect_back(fallback_location: @pic)
   end
 
   private
