@@ -1,12 +1,12 @@
 #notice
   = notice
 
-- @pics.each do |pic|
-  .col-md-6.col-md-offset-3
-    .box.panel.panel-default
-      .panel-body
+.col-md-6.col-md-offset-4
+  #pics.transitions-enabled
+    - @pics.each do |pic|
+      .box.panel.panel-default
+        = link_to (image_tag pic.image.url(:medium)), pic
         %h2= link_to pic.title, pic
-        
-.col-md-6.col-md-offset-3
+
   - if user_signed_in? and current_user.is_admin
     = link_to 'New One', new_pic_path, class: "btn btn-default"
