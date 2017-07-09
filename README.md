@@ -10,14 +10,19 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/romasks/my-site?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=romasks/my-site&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/3a76a572d15f4efb9a23422e8afa937a)](https://www.codacy.com/app/romasks/my-site?utm_source=github.com&utm_medium=referral&utm_content=romasks/my-site&utm_campaign=Badge_Coverage)
 
+
 ### TODO:
 
 - [X] Welcome page (about me)
 - [x] Create Posts
 - [X] Config RSpec
 - [X] Add devise
-- [ ] Create Pics
+- [X] Create Pics
 - [ ] Create Books
+- [ ] Styling devise pages
+- [ ] Write controller tests
+- [ ] Write model tests
+- [ ] Write view tests
 
 
 ### Component version:
