@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe "pics/edit", type: :view do
+  let(:user) { FactoryGirl.create(:admin) }
+  
   before(:each) do
     @pic = assign(:pic, Pic.create!(
       :title => "MyString",
       :description => "MyText",
-      :user => nil
+      :user => user
     ))
   end
 
@@ -17,8 +19,6 @@ RSpec.describe "pics/edit", type: :view do
       assert_select "input#pic_title[name=?]", "pic[title]"
 
       assert_select "textarea#pic_description[name=?]", "pic[description]"
-
-      assert_select "input#pic_user_id[name=?]", "pic[user_id]"
     end
   end
 end

@@ -6,5 +6,5 @@ class Pic < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   validates :title, presence: true
-  validates :description, presence: true
+  validates :user, presence: true
 end

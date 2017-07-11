@@ -3,7 +3,7 @@
 ## Code Status
 
 [![Codeship Status](https://app.codeship.com/projects/2110c620-356a-0134-e2bd-0eb0c8e6c9c0/status?branch=master)](https://app.codeship.com/projects/165250)
-[![Travis CI Status](https://travis-ci.org/romasks/romasks.svg?branch=master)](https://travis-ci.org/romasks/romasks)
+[![Travis CI Status](https://travis-ci.org/romasks/my-site.svg?branch=master)](https://travis-ci.org/romasks/my-site)
 [![Code Climate](https://codeclimate.com/github/romasks/romasks/badges/gpa.svg)](https://codeclimate.com/github/romasks/romasks)
 [![Test Coverage](https://codeclimate.com/github/romasks/romasks/badges/coverage.svg)](https://codeclimate.com/github/romasks/romasks/coverage)
 [![Issue Count](https://codeclimate.com/github/romasks/romasks/badges/issue_count.svg)](https://codeclimate.com/github/romasks/romasks)
@@ -20,8 +20,8 @@
 - [X] Create Pics
 - [ ] Create Books
 - [ ] Styling devise pages
-- [ ] Write controller tests
-- [ ] Write model tests
+- [X] Write controller tests
+- [X] Write model tests
 - [ ] Write view tests
 
 

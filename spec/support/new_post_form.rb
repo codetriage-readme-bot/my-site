@@ -3,7 +3,7 @@ class NewPostForm
 
 	def visit_page
 		visit '/posts'
-		click_on('Create New One')
+		click_on('New One')
 
 		self
 	end

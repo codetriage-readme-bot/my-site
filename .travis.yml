@@ -12,6 +12,11 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec bin/rspec spec/controllers
+  - bundle exec bin/rspec spec/features
+  - bundle exec bin/rspec spec/models
+  - bundle exec bin/rspec spec/requests
+  - bundle exec bin/rspec spec/routing
+  # - bundle exec bin/rspec spec/views
 
 addons:
   code_climate:
