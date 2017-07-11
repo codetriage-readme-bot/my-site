@@ -12,7 +12,9 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec bin/rspec spec/controllers
-
-addons:
-  code_climate:
-    repo_token: a3a36a1f874b79c215786625b036065b02c2b492d1b6b72a43fb4fe3aa293f83
+  - bundle exec bin/rspec spec/features
+  - bundle exec bin/rspec spec/models
+  - bundle exec bin/rspec spec/requests
+  - bundle exec bin/rspec spec/routing
+  # - bundle exec bin/rspec spec/views
+  

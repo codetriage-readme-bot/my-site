@@ -30,7 +30,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
 
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'spring'
@@ -41,6 +40,9 @@ gem 'web-console', group: :development
 
 group :test do
   gem 'capybara'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'simplecov', require: false
 end
 
 

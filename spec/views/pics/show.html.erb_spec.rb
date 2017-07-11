@@ -5,7 +5,6 @@ RSpec.describe "pics/show", type: :view do
     @pic = assign(:pic, Pic.create!(
       :title => "Title",
       :description => "MyText",
-      :user => nil
     ))
   end
 
