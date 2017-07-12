@@ -18,11 +18,12 @@
 - [X] Config RSpec
 - [X] Add devise
 - [X] Create Pics
-- [ ] Create Books
+- [ ] Create Books with comments
 - [ ] Styling devise pages
 - [X] Write controller tests
 - [X] Write model tests
 - [ ] Write view tests
+- [ ] Add comments to Posts and Pics
 
 
 ### Component version:
