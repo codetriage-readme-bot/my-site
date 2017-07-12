@@ -24,6 +24,7 @@ gem 'simple_form', '~> 3.5'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'sentry-raven'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -45,7 +46,6 @@ group :test do
   gem 'codacy-coverage', require: false
   gem 'codeclimate-test-reporter', '~> 1.0.0'
 end
-
 
 group :production do
   gem 'pg'
