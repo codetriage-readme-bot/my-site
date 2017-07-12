@@ -33,7 +33,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'codacy-coverage', require: false
 end
 
 gem 'web-console', group: :development
@@ -43,6 +42,8 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'simplecov', require: false
+  gem 'codacy-coverage', require: false
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
 end
 
 
