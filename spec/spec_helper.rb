@@ -1,5 +1,20 @@
 require 'simplecov'
-SimpleCov.start 'rails'
+require 'codacy-coverage'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+    SimpleCov::Formatter::HTMLFormatter,
+    Codacy::Formatter
+])
+
+SimpleCov.start do
+  add_filter '.gems'
+  add_filter 'pkg'
+  add_filter 'spec'
+  add_filter 'vendor'
+end
+
+# require 'simplecov'
+# SimpleCov.start 'rails'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
