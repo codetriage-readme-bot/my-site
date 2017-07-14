@@ -1,23 +1,23 @@
 class NewPostForm
-	include Capybara::DSL
+  include Capybara::DSL
 
-	def visit_page
-		visit '/posts'
-		click_on('New One')
+  def visit_page
+    visit '/posts'
+    click_on('New One')
 
-		self
-	end
+    self
+  end
 
-	def fill_in_with(params = {})
-		fill_in('Title', with: params.fetch(:title, 'Make a Post'))
-		fill_in('Body', with: 'Post content')
+  def fill_in_with(params = {})
+    fill_in('Title', with: params.fetch(:title, 'Make a Post'))
+    fill_in('Body', with: 'Post content')
 
-		self
-	end
+    self
+  end
 
-	def submit
-		click_on('Create Post')
+  def submit
+    click_on('Create Post')
 
-		self
-	end
+    self
+  end
 end

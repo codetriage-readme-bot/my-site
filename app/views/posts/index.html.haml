@@ -5,5 +5,5 @@
         %h2= link_to post.title, post
         %p= truncate(post.body, length:200)
 
-  - if user_signed_in? and current_user.is_admin
+  - if user_signed_in? and current_user.admin?
     = link_to 'New One', new_post_path, class: "btn btn-default"

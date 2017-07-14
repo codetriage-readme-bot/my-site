@@ -17,6 +17,6 @@
               = link_to like_pic_path(@pic), method: :put, class: "btn btn-default" do
                 %span.glyphicon.glyphicon-thumbs-up
                 = @pic.get_upvotes.size
-              - if user_signed_in? and current_user.is_admin
+              - if user_signed_in? and current_user.admin?
                 = link_to 'Fix It', edit_pic_path(@pic), class: "btn btn-info"
                 = link_to 'Delete', pics_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

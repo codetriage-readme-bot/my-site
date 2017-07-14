@@ -1,0 +1,35 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/initializers/**/*'
+    - 'coverage/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  Rails:
+    Enabled: true
+
+Documentation:
+  Enabled: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+  SupportedStyles:
+    - with_first_parameter
+    - with_fixed_indentation
+
+Metrics/LineLength:
+  Max: 90
+
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+  SupportedStyles:
+    - normal
+    - rails
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes

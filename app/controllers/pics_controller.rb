@@ -1,5 +1,5 @@
 class PicsController < ApplicationController
-  before_action :set_pic, only: [:show, :edit, :update, :destroy, :upvote]
+  before_action :find_pic, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :authenticate_user!, except: [:index, :show, :upvote]
   before_action :admin_only, except: [:index, :show, :upvote]
 
@@ -12,6 +12,7 @@ class PicsController < ApplicationController
   # GET /pics/1
   # GET /pics/1.json
   def show
+    # code
   end
 
   # GET /pics/new
@@ -21,6 +22,7 @@ class PicsController < ApplicationController
 
   # GET /pics/1/edit
   def edit
+    # code
   end
 
   # POST /pics
@@ -69,19 +71,16 @@ class PicsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pic
+
+    def find_pic
       @pic = Pic.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def pic_params
       params.require(:pic).permit(:title, :description, :user_id, :image)
     end
 
     def admin_only
-      if current_user.email != "lusersks@gmail.com"
-        redirect_to pics_url
-      end
+      redirect_to pics_url if current_user.email != 'lusersks@gmail.com'
     end
 end

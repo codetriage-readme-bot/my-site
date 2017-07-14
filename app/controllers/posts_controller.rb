@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    # code
   end
 
   def new
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    # code
   end
 
   def create
@@ -41,19 +43,16 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def find_post
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :body)
     end
 
     def admin_only
-      if current_user.email != "lusersks@gmail.com"
-        redirect_to posts_path
-      end
+      redirect_to posts_path if current_user.email != 'lusersks@gmail.com'
     end
 end

@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :pics
 
   # Include default devise modules. Others available are:
@@ -7,8 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def is_admin
-    self.email == "lusersks@gmail.com"
+  def admin?
+    email == 'lusersks@gmail.com'
   end
-
 end

@@ -5,5 +5,5 @@
         = link_to (image_tag pic.image.url), pic
         %h2= link_to pic.title, pic
 
-  - if user_signed_in? and current_user.is_admin
+  - if user_signed_in? and current_user.admin?
     = link_to 'New One', new_pic_path, class: "btn btn-default"
