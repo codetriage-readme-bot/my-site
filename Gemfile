@@ -40,7 +40,7 @@ gem 'web-console', group: :development
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git'
   gem 'simplecov', require: false
   gem 'codacy-coverage', require: false
   gem 'codeclimate-test-reporter', '~> 1.0.0'
