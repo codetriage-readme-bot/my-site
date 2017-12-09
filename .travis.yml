@@ -5,11 +5,11 @@ env:
 language: ruby
 
 rvm:
-  - 2.4.0
+  - 2.3.3
 
 before_install:
-  - gem uninstall -i /home/travis/.rvm/gems/ruby-2.4.0@global bundler
-  - gem install bundler -v 1.15.1
+#  - gem uninstall -i /home/travis/.rvm/gems/ruby-2.3.3@global bundler
+  - gem install bundler -v 1.16.0
   - bundle install --without production
 
 before_script:
